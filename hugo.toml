@@ -1,9 +1,17 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
 [module]
   # uncomment line below for temporary local development of module
   # replacements = "github.com/lxndrblz/anatole -> ../../anatole"
   [[module.imports]]
     path = "github.com/lxndrblz/anatole"
     disable = false
+
+[params]
+title = "Salut, c'est Quentin"
+author = 'Quentin | Toofi'
+profilePicture = "images/profile.jpg"
+description = """
+On m'appelle aussi Toofi
+J'aime le code, la musique et le jeu vidéo
+"""
