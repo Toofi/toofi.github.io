@@ -8,6 +8,8 @@ languageCode = 'en-us'
     disable = false
 
 [params]
+doNotLoadAnimations = true
+contentratio = 0.64
 title = "Salut, c'est Quentin"
 author = 'Quentin | Toofi'
 profilePicture = "images/profile.jpg"
