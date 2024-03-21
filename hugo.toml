@@ -31,6 +31,10 @@ icon = "fas fa-envelope"
 title = "e-mail"
 url = "mailto:qhentin@gmail.com"
 [[params.socialIcons]]
+icon = "fa-brands fa-spotify"
+title = "Youtube"
+url = "https://open.spotify.com/user/116783269"
+[[params.socialIcons]]
 icon = "fa-brands fa-twitch"
 title = "Twitch"
 url = "https://www.twitch.tv/toofi__"
