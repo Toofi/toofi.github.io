@@ -13,5 +13,26 @@ author = 'Quentin | Toofi'
 profilePicture = "images/profile.jpg"
 description = """
 On m'appelle aussi Toofi
-J'aime le code, la musique et le jeu vidéo
+J'aime le code, la musique, l'IA générative et le jeu vidéo
 """
+
+[[params.socialIcons]]
+icon = "fab fa-linkedin"
+title = "Linkedin"
+url = "https://www.linkedin.com/in/herpoelquentin/"
+[[params.socialIcons]]
+icon = "fa-brands fa-twitter"
+title = "Twitter"
+url = "https://www.linkedin.com/in/herpoelquentin/"
+[[params.socialIcons]]
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:qhentin@gmail.com"
+[[params.socialIcons]]
+icon = "fa-brands fa-twitch"
+title = "Twitch"
+url = "https://www.twitch.tv/toofi__"
+[[params.socialIcons]]
+icon = "fa-brands fa-youtube"
+title = "Youtube"
+url = "https://www.youtube.com/channel/UCSyCKD8oTm1v2ZiZ0yNfzpw"
