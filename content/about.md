@@ -1,4 +1,4 @@
 ## Salut!
-Je m'appelle Toofi, et en 2018 j'ai décidé de reprendre et finir des études en informatique et développement alors que j'avais une carrière dans les transports depuis 2014. Depuis, je suis tombé amoureux du métier de développeur et depuis 2021 je travaille en tant que développer full-stack. Je code en ce moment en C# et Javascript/Typescript, avec des frameworks tels que .NET, NestJS et Angular.
+Je m'appelle Toofi, et en 2018 j'ai décidé de reprendre et finir des études en informatique et développement alors que j'avais une carrière dans les transports depuis 2014. Depuis, je suis tombé amoureux du métier de développeur et depuis 2021 je travaille en tant que développer full-stack. Je code en ce moment en C# et Javascript/Typescript, avec des frameworks tels que .NET, NestJS et Angular. J'aime l'agilité et la méthode SCRUM. J'aime aussi autant le café que le thé.
 
 Quand je ne suis pas devant du code, j'aime squatter Spotify pour découvrir de nouvelles musiques, aller à des concerts, courir des kilomètres pour le plaisir de courir, sortir le week-end ou mettre quelques headshots à l'ak47.
