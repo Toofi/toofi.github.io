@@ -22,14 +22,15 @@ J'aime le code, la musique, l'IA générative et le jeu vidéo
 icon = "fab fa-linkedin"
 title = "Linkedin"
 url = "https://www.linkedin.com/in/herpoelquentin/"
+
+[[params.socialIcons]]
+icon = "fa-brands fa-github"
+title = "Github"
+url = "https://github.com/Toofi"
 [[params.socialIcons]]
 icon = "fa-brands fa-twitter"
 title = "Twitter"
 url = "https://twitter.com/90Toofi"
-[[params.socialIcons]]
-icon = "fas fa-envelope"
-title = "e-mail"
-url = "mailto:qhentin@gmail.com"
 [[params.socialIcons]]
 icon = "fa-brands fa-spotify"
 title = "Youtube"
@@ -39,9 +40,9 @@ icon = "fa-brands fa-twitch"
 title = "Twitch"
 url = "https://www.twitch.tv/toofi__"
 [[params.socialIcons]]
-icon = "fa-brands fa-youtube"
-title = "Youtube"
-url = "https://www.youtube.com/channel/UCSyCKD8oTm1v2ZiZ0yNfzpw"
+icon = "fas fa-envelope"
+title = "e-mail"
+url = "mailto:qhentin@gmail.com"
 
 [menu]
 
