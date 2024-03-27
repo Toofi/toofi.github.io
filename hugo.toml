@@ -58,8 +58,14 @@ url = "https://www.youtube.com/channel/UCSyCKD8oTm1v2ZiZ0yNfzpw"
   url = "/post/"
 
   [[menu.main]]
-  name = "About"
+  name = "Portfolio"
   weight = 300
+  identifier = "portfolio"
+  url = "/portfolio/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 400
   identifier = "about"
   url = "/about/"
   

@@ -1,0 +1,34 @@
+portfolioitems:
+  # portfolio category
+  - title: Mes projets "utiles"
+    # items within a category
+    portfolioitem:
+      - name: Spotify New Releases
+        image: '/images/portfolio/spotify.jpg'
+        link: https://github.com/Toofi/spotify-new-releases-gathbot
+        description: 'Spotify New Releases détecte chaque nouvelle sortie mondiale sur Spotify et va le notifier via un bot Discord, ou bot Bluesky.'
+        tags:
+          - Spotify
+          - .NET
+          - Discord
+          - Bluesky
+        status: 'WIP'
+        start: '2023'
+        end: '2024'
+        authors:
+          - Toofi
+      - name: Tournament Proxy
+        image: '/images/portfolio/tournament.jpg'
+        link: https://github.com/Toofi/tournament-proxy
+        description: 'Tournament Proxy est un proxy permettant de relier des applications web de gestion de tournoi sportifs et e-sportifs et un affichage dynamique des scores sur la plate-forme live Twitch.'
+        tags:
+          - NestJS
+          - Typescript
+          - Start.gg
+          - Challonge
+          - Twitch
+        status: 'Terminée'
+        start: '2023'
+        end: '2023'
+        authors:
+          - Toofi
