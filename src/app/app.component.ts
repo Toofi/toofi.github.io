@@ -10,4 +10,5 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'toofi.github.io';
+  imagePath: string = "assets/profile.jpg";
 }
