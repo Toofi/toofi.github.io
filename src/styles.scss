@@ -17,6 +17,10 @@
   --button-primary: #DED3B6;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100%;
   margin: 0;
@@ -46,7 +50,7 @@ body {
 
 body::before,
 body::after {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   content: '';
