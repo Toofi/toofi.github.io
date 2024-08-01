@@ -8,14 +8,14 @@
 .profile {
   @apply flex flex-row justify-between items-center w-full gap-12 p-64;
   background:
-        linear-gradient(to right, #151515 1px, transparent 1px) 0 0,
-        linear-gradient(to right, #151515 1px, transparent 1px) 0 100%,
-        linear-gradient(to left, #151515 1px, transparent 1px) 100% 0,
-        linear-gradient(to left, #151515 1px, transparent 1px) 100% 100%,
-        linear-gradient(to bottom, #151515 1px, transparent 1px) 0 0,
-        linear-gradient(to bottom, #151515 1px, transparent 1px) 100% 0,
-        linear-gradient(to top, #151515 1px, transparent 1px) 0 100%,
-        linear-gradient(to top, #151515 1px, transparent 1px) 100% 100%;
+        linear-gradient(to right, #151515 1px, transparent 1px) 5% 25%,
+        linear-gradient(to right, #151515 1px, transparent 1px) 5% 75%,
+        linear-gradient(to left, #151515 1px, transparent 1px) 95% 25%,
+        linear-gradient(to left, #151515 1px, transparent 1px) 95% 75%,
+        linear-gradient(to bottom, #151515 1px, transparent 1px) 5% 25%,
+        linear-gradient(to bottom, #151515 1px, transparent 1px) 95% 25%,
+        linear-gradient(to top, #151515 1px, transparent 1px) 5% 75%,
+        linear-gradient(to top, #151515 1px, transparent 1px) 95% 75%;
   background-repeat: no-repeat;
   background-size: 20px 20px;
 }

@@ -3,3 +3,14 @@
   color: var(--grey);
   @apply font-normal text-xl;
 }
+
+.link:hover {
+  color: var(--text);
+}
+
+.nav {
+  @apply 
+  fixed
+  pt-1
+  pr-6;
+}
