@@ -170,18 +170,18 @@
 
 .hero-photo-zone img {
   width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   display: block;
   margin: 0;
   padding: 0;
   object-fit: cover;
+  transform: scale(1.03);
   transition: filter 0.5s ease, transform 0.5s ease;
 }
 
 .hero-photo-zone:hover img {
   filter: grayscale(0.35) brightness(1.03);
-  transform: scale(1.03);
+  transform: scale(1.08);
 }
 
 .hero-photo-overlay {
@@ -266,13 +266,7 @@
     grid-area: photo;
     border-bottom: 1px solid var(--line);
     height: 100%;
-  }
-
-  .hero-photo-zone img {
-    width: 100%;
-    height: 100%;
     aspect-ratio: auto;
-    object-fit: cover;
   }
 
   .hero-stats {
