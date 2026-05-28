@@ -112,3 +112,23 @@
   color: var(--muted);
   letter-spacing: 0.06em;
 }
+
+@media (max-width: 900px) {
+  .blog-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog-card {
+    padding: 22px;
+  }
+
+  .blog-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .blog-layout {
+    grid-template-columns: 1fr;
+  }
+}

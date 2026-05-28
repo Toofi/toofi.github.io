@@ -122,3 +122,51 @@
   background: var(--accent);
   animation: pulse 2s ease infinite;
 }
+
+@media (max-width: 900px) {
+  .topbar {
+    padding: 8px 20px;
+  }
+
+  .navbar {
+    padding: 4px 20px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .nav-links a {
+    padding: 5px 10px;
+    font-size: 10px;
+  }
+
+  .nav-avail {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 600px) {
+  .topbar-logo {
+    font-size: 13px;
+  }
+
+  .lang-switch {
+    font-size: 10px;
+    padding: 3px 10px;
+  }
+
+  .nav-avail {
+    display: none;
+  }
+
+  .navbar {
+    justify-content: center;
+  }
+
+  .nav-links a {
+    padding: 5px 8px;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+  }
+}

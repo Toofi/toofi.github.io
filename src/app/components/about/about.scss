@@ -26,6 +26,14 @@
   color: var(--accent);
 }
 
+.about-title-col h2 ::ng-deep .t-line {
+  display: block;
+}
+
+.about-title-col h2 ::ng-deep .t-w {
+  display: block;
+}
+
 .about-text-col {
   padding-left: 40px;
   padding-bottom: 40px;
@@ -85,4 +93,51 @@
   color: var(--accent);
   min-width: 20px;
   padding-top: 2px;
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    padding-top: 28px;
+  }
+
+  .about-title-col {
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding-right: 0;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+  }
+
+  .about-title-col h2 {
+    font-size: 40px;
+  }
+
+  .about-title-col h2 ::ng-deep .t-w {
+    display: inline;
+  }
+
+  .about-text-col {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title-col h2 {
+    font-size: 32px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-item {
+    border-right: none;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .value-item:nth-last-child(2) {
+    border-bottom: 1px solid var(--line);
+  }
 }

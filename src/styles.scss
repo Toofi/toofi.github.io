@@ -55,6 +55,12 @@ body::before {
   border-top: 2px solid var(--ink);
 }
 
+@media (max-width: 720px) {
+  .section-header {
+    padding: 12px 20px;
+  }
+}
+
 .section-header-label {
   font-family: var(--mono);
   font-size: 11px;
@@ -83,6 +89,12 @@ body::before {
 
 .section-body {
   padding: 0 48px 56px;
+}
+
+@media (max-width: 720px) {
+  .section-body {
+    padding: 0 20px 40px;
+  }
 }
 
 .tag {
