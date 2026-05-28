@@ -41,7 +41,7 @@ const EXPERIENCES: Experience[] = [
   {
     date: { fr: '2024', en: '2024' },
     sector: { fr: 'Ferroviaire', en: 'Railway' },
-    type: { fr: 'Freelance', en: 'Freelance' },
+    type: { fr: 'Salarié', en: 'Employee' },
     title: {
       fr: 'Développeur — Systèmes embarqués de signalisation',
       en: 'Developer — Embedded signalling systems',
@@ -56,7 +56,7 @@ const EXPERIENCES: Experience[] = [
   {
     date: { fr: '2023 → 2024', en: '2023 → 2024' },
     sector: { fr: 'Transport aérien', en: 'Air transport' },
-    type: { fr: 'Freelance', en: 'Freelance' },
+    type: { fr: 'Salarié', en: 'Employee' },
     title: {
       fr: "Développeur Front-end — Gestion de portes d'embarquement",
       en: 'Front-end Developer — Boarding gate management',
