@@ -21,7 +21,7 @@
   font-weight: 700;
 }
 
-.about-title-col h2 em {
+.about-title-col h2 ::ng-deep em {
   font-style: italic;
   color: var(--accent);
 }

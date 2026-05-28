@@ -1,9 +1,9 @@
 <div class="section-header" id="experience" appReveal>
-  <span class="section-header-label">Expériences</span>
+  <span class="section-header-label">{{ sectionLabel() }}</span>
   <span class="section-header-count">002</span>
 </div>
 <div class="section-body">
-  @for (xp of experiences; track xp.title) {
+  @for (xp of experiences; track xp.title.fr) {
     <div
       class="xp-item"
       appReveal
@@ -11,13 +11,13 @@
       [class.reveal-delay-2]="xp.delay === 2"
     >
       <div class="xp-meta">
-        <div class="xp-date">{{ xp.date }}</div>
-        <div class="xp-sector">{{ xp.sector }}</div>
-        <div class="xp-type">{{ xp.type }}</div>
+        <div class="xp-date">{{ xp.date[lang()] }}</div>
+        <div class="xp-sector">{{ xp.sector[lang()] }}</div>
+        <div class="xp-type">{{ xp.type[lang()] }}</div>
       </div>
       <div class="xp-content">
-        <h3>{{ xp.title }}</h3>
-        <p [innerHTML]="xp.description"></p>
+        <h3>{{ xp.title[lang()] }}</h3>
+        <p [innerHTML]="xp.description[lang()]"></p>
         <div class="xp-tags">
           @for (tag of xp.tags; track tag) {
             <span class="tag">{{ tag }}</span>

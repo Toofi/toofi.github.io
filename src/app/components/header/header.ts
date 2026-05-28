@@ -2,36 +2,51 @@ import { isPlatformBrowser } from '@angular/common';
 import {
   Component,
   HostListener,
-  OnDestroy,
   OnInit,
   PLATFORM_ID,
-  signal,
+  computed,
   inject,
+  signal,
 } from '@angular/core';
+import { LangService } from '../../i18n/lang.service';
 
 interface NavLink {
   href: string;
-  label: string;
+  label: { fr: string; en: string };
 }
+
+const AVAIL = {
+  fr: 'Disponible en freelance',
+  en: 'Available for freelance',
+};
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
-export class HeaderComponent implements OnInit, OnDestroy {
+export class HeaderComponent implements OnInit {
   private readonly platformId = inject(PLATFORM_ID);
+  protected readonly langService = inject(LangService);
 
-  readonly lang = signal<'FR' | 'EN'>('FR');
   readonly activeSection = signal<string>('');
 
   readonly links: NavLink[] = [
-    { href: 'about', label: 'À propos' },
-    { href: 'experience', label: 'Expériences' },
-    { href: 'stack', label: 'Stack' },
-    { href: 'blog', label: 'Blog' },
-    { href: 'contact', label: 'Contact' },
+    { href: 'about', label: { fr: 'À propos', en: 'About' } },
+    { href: 'experience', label: { fr: 'Expériences', en: 'Experience' } },
+    { href: 'stack', label: { fr: 'Stack', en: 'Stack' } },
+    { href: 'blog', label: { fr: 'Blog', en: 'Blog' } },
+    { href: 'contact', label: { fr: 'Contact', en: 'Contact' } },
   ];
+
+  /** Label shown in the button = the language we'd switch TO (i.e. the other one). */
+  protected readonly switchLabel = computed(() =>
+    this.langService.current() === 'fr' ? 'EN' : 'FR',
+  );
+
+  protected readonly availLabel = computed(() => AVAIL[this.langService.current()]);
+
+  protected readonly lang = this.langService.current;
 
   ngOnInit(): void {
     if (isPlatformBrowser(this.platformId)) {
@@ -39,10 +54,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnDestroy(): void {}
-
   toggleLang(): void {
-    this.lang.update((v) => (v === 'FR' ? 'EN' : 'FR'));
+    this.langService.toggle();
   }
 
   goToTop(event: Event): void {

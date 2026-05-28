@@ -22,7 +22,7 @@
   font-weight: 700;
 }
 
-.contact-left h2 em {
+.contact-left h2 ::ng-deep em {
   font-style: italic;
   color: var(--accent);
 }

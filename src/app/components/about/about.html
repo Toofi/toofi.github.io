@@ -1,31 +1,18 @@
 <div class="section-header" id="about" appReveal>
-  <span class="section-header-label">À propos</span>
+  <span class="section-header-label">{{ t().sectionLabel }}</span>
   <span class="section-header-count">001</span>
 </div>
 <div class="section-body">
   <div class="about-layout" appReveal>
     <div class="about-title-col">
-      <h2>Code<br />propre,<br />produits<br /><em>durables.</em></h2>
+      <h2 [innerHTML]="t().titleHtml"></h2>
     </div>
     <div class="about-text-col">
-      <p>
-        Je suis <strong>Quentin Herpoel</strong>, alias <strong>Toofi</strong>, développeur
-        fullstack freelance spécialisé en <strong>.NET/C#</strong> et <strong>Angular</strong>.
-        Avec plus de 5 ans d'expérience, je conçois des applications web robustes, de
-        l'architecture back-end à l'expérience utilisateur.
-      </p>
-      <p>
-        Avant de me lancer dans le développement, j'ai travaillé dans le
-        <strong>transport et la logistique</strong> de 2014 à 2021 — une expérience qui m'a
-        appris la rigueur opérationnelle, le travail en équipe et la résistance au stress.
-      </p>
-      <p>
-        Ce qui me différencie ? Une obsession pour la <strong>qualité du code</strong> — pas
-        seulement un code qui fonctionne, mais un code qui se maintient, se teste et s'adapte
-        dans la durée.
-      </p>
+      <p [innerHTML]="t().p1Html"></p>
+      <p [innerHTML]="t().p2Html"></p>
+      <p [innerHTML]="t().p3Html"></p>
       <div class="values-grid">
-        @for (value of values; track value.n) {
+        @for (value of t().values; track value.n) {
           <div class="value-item">
             <span class="value-n">{{ value.n }}</span>
             {{ value.label }}

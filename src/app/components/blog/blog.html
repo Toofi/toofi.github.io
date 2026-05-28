@@ -1,17 +1,17 @@
 <div class="section-header" id="blog" appReveal>
-  <span class="section-header-label">Blog</span>
+  <span class="section-header-label">{{ sectionLabel() }}</span>
   <span class="section-header-count">004</span>
 </div>
 <div class="section-body">
   <div class="blog-layout" appReveal>
-    @for (post of posts; track post.titleHtml) {
+    @for (post of posts; track post.titleHtml.fr) {
       <a class="blog-card" [href]="post.link">
-        <div class="blog-label">{{ post.label }}</div>
-        <div class="blog-title" [innerHTML]="post.titleHtml"></div>
-        <div class="blog-excerpt">{{ post.excerpt }}</div>
+        <div class="blog-label">{{ post.label[lang()] }}</div>
+        <div class="blog-title" [innerHTML]="post.titleHtml[lang()]"></div>
+        <div class="blog-excerpt">{{ post.excerpt[lang()] }}</div>
         <div class="blog-footer">
-          <span class="blog-read">Lire l'article →</span>
-          <span class="blog-date">{{ post.date }}</span>
+          <span class="blog-read">{{ readLabel() }}</span>
+          <span class="blog-date">{{ post.date[lang()] }}</span>
         </div>
       </a>
     }
