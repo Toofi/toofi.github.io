@@ -84,3 +84,23 @@
   border-color: rgba(200, 80, 42, 0.35);
   color: var(--accent);
 }
+
+@media (max-width: 900px) {
+  .stack-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stack-card {
+    padding: 22px;
+  }
+
+  .stack-title {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stack-layout {
+    grid-template-columns: 1fr;
+  }
+}

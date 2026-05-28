@@ -110,3 +110,32 @@
   border-color: rgba(200, 80, 42, 0.35);
   color: var(--accent);
 }
+
+@media (max-width: 720px) {
+  .xp-item {
+    grid-template-columns: 1fr;
+  }
+
+  .xp-meta {
+    padding: 20px 0 0;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 16px;
+    align-items: center;
+  }
+
+  .xp-type {
+    margin-top: 0;
+  }
+
+  .xp-content {
+    padding: 20px 0 24px;
+  }
+
+  .xp-content h3 {
+    font-size: 20px;
+  }
+}

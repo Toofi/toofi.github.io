@@ -5,7 +5,8 @@ import { RevealDirective } from '../../directives/reveal.directive';
 const TRANSLATIONS = {
   fr: {
     sectionLabel: 'À propos',
-    titleHtml: 'Code<br>propre,<br>produits<br><em>durables.</em>',
+    titleHtml:
+      '<span class="t-line"><span class="t-w">Code</span> <span class="t-w">propre,</span></span><span class="t-line"><span class="t-w">produits</span> <span class="t-w"><em>durables.</em></span></span>',
     p1Html:
       "Je suis <strong>Quentin Herpoel</strong>, alias <strong>Toofi</strong>, développeur fullstack freelance spécialisé en <strong>.NET/C#</strong> et <strong>Angular</strong>. Avec plus de 4 ans d'expérience, je conçois des applications web robustes, de l'architecture back-end à l'expérience utilisateur.",
     p2Html:
@@ -21,7 +22,8 @@ const TRANSLATIONS = {
   },
   en: {
     sectionLabel: 'About',
-    titleHtml: 'Clean<br>code,<br>lasting<br><em>products.</em>',
+    titleHtml:
+      '<span class="t-line"><span class="t-w">Clean</span> <span class="t-w">code,</span></span><span class="t-line"><span class="t-w">lasting</span> <span class="t-w"><em>products.</em></span></span>',
     p1Html:
       "I'm <strong>Quentin Herpoel</strong>, a.k.a. <strong>Toofi</strong>, a freelance fullstack developer specialised in <strong>.NET/C#</strong> and <strong>Angular</strong>. With over 4 years of experience, I design robust web applications — from back-end architecture to the user experience.",
     p2Html:

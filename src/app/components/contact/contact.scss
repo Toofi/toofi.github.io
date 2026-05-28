@@ -155,3 +155,35 @@ textarea.form-input {
   background: var(--accent);
   border-color: var(--accent);
 }
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+    margin-top: 24px;
+  }
+
+  .contact-left {
+    padding: 28px;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .contact-left h2 {
+    font-size: 38px;
+  }
+
+  .contact-right {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-left,
+  .contact-right {
+    padding: 24px 20px;
+  }
+
+  .contact-left h2 {
+    font-size: 32px;
+  }
+}
