@@ -1,6 +1,12 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { LangService } from '../../i18n/lang.service';
 import { RevealDirective } from '../../directives/reveal.directive';
+
+interface Bilingual {
+  fr: string;
+  en: string;
+}
 
 type ContactItem =
   | {
@@ -8,9 +14,9 @@ type ContactItem =
       scheme: 'mailto:' | 'tel:';
       /** Char codes of the real value. Never appears as a literal string in source. */
       codes: number[];
-      /** Display teaser shown before reveal. */
+      /** Display teaser shown before reveal (same in both languages). */
       mask: string;
-      hint: string;
+      hint: Bilingual;
     }
   | {
       kind: 'public';
@@ -19,6 +25,42 @@ type ContactItem =
       external?: boolean;
     };
 
+const REVEAL_HINT: Bilingual = {
+  fr: 'Cliquer pour révéler',
+  en: 'Click to reveal',
+};
+
+const TRANSLATIONS = {
+  fr: {
+    sectionLabel: 'Contact',
+    titleHtml: 'Travaillons<br><em>ensemble!</em>',
+    description:
+      'Disponible pour des missions freelance, du consulting technique ou des collaborations long terme. Basé à Mouscron, Belgique. Réponse sous 24h.',
+    formTitle: 'Envoyer un message',
+    nameLabel: 'Nom',
+    namePlaceholder: 'Jean Dupont',
+    emailLabel: 'Email',
+    emailPlaceholder: 'jean@startup.fr',
+    messageLabel: 'Message',
+    messagePlaceholder: 'Décrivez votre projet...',
+    submit: 'Envoyer →',
+  },
+  en: {
+    sectionLabel: 'Contact',
+    titleHtml: "Let's work<br><em>together!</em>",
+    description:
+      'Available for freelance assignments, technical consulting or long-term collaborations. Based in Mouscron, Belgium. Reply within 24 hours.',
+    formTitle: 'Send a message',
+    nameLabel: 'Name',
+    namePlaceholder: 'Jane Doe',
+    emailLabel: 'Email',
+    emailPlaceholder: 'jane@startup.com',
+    messageLabel: 'Message',
+    messagePlaceholder: 'Tell me about your project...',
+    submit: 'Send →',
+  },
+} as const;
+
 @Component({
   selector: 'app-contact',
   imports: [FormsModule, RevealDirective],
@@ -26,6 +68,10 @@ type ContactItem =
   styleUrl: './contact.scss',
 })
 export class ContactComponent {
+  private readonly langService = inject(LangService);
+  protected readonly lang = this.langService.current;
+  protected readonly t = computed(() => TRANSLATIONS[this.lang()]);
+
   readonly contactLinks: ContactItem[] = [
     {
       kind: 'protected',
@@ -35,7 +81,7 @@ export class ContactComponent {
         97, 105, 108, 46, 99, 111, 109,
       ],
       mask: 'herpoel•••••••@gmail•com',
-      hint: 'Cliquer pour révéler',
+      hint: REVEAL_HINT,
     },
     {
       kind: 'public',
@@ -48,7 +94,7 @@ export class ContactComponent {
       scheme: 'tel:',
       codes: [43, 51, 50, 52, 55, 56, 51, 50, 53, 51, 54, 56],
       mask: '(+32) 4•• •• •• ••',
-      hint: 'Cliquer pour révéler',
+      hint: REVEAL_HINT,
     },
   ];
 
@@ -75,7 +121,7 @@ export class ContactComponent {
 
   ariaLabel(item: ContactItem, index: number): string {
     if (item.kind === 'public') return item.label;
-    return this.isRevealed(index) ? this.decode(item.codes) : item.hint;
+    return this.isRevealed(index) ? this.decode(item.codes) : item.hint[this.lang()];
   }
 
   onContactClick(event: Event, item: ContactItem, index: number): void {

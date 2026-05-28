@@ -1,8 +1,13 @@
 <header class="site-header">
   <div class="topbar">
     <a href="#top" class="topbar-logo" (click)="goToTop($event)">TOOFI<span>.</span>DEV</a>
-    <button class="lang-switch" type="button" (click)="toggleLang()">
-      <span>{{ lang() }}</span>
+    <button
+      class="lang-switch"
+      type="button"
+      [attr.aria-label]="'Switch to ' + switchLabel()"
+      (click)="toggleLang()"
+    >
+      <span>{{ switchLabel() }}</span>
     </button>
   </div>
   <nav class="navbar">
@@ -13,11 +18,11 @@
             [href]="'#' + link.href"
             [class.active]="activeSection() === link.href"
             (click)="scrollTo($event, link.href)"
-            >{{ link.label }}</a
+            >{{ link.label[lang()] }}</a
           >
         </li>
       }
     </ul>
-    <span class="nav-avail">Disponible en freelance</span>
+    <span class="nav-avail">{{ availLabel() }}</span>
   </nav>
 </header>

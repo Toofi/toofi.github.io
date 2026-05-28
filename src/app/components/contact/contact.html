@@ -1,15 +1,12 @@
 <div class="section-header" id="contact" appReveal>
-  <span class="section-header-label">Contact</span>
+  <span class="section-header-label">{{ t().sectionLabel }}</span>
   <span class="section-header-count">005</span>
 </div>
 <div class="section-body">
   <div class="contact-layout" appReveal>
     <div class="contact-left">
-      <h2>Travaillons<br /><em>ensemble!</em></h2>
-      <p>
-        Disponible pour des missions freelance, du consulting technique ou des collaborations
-        long terme. Basé à Mouscron, Belgique. Réponse sous 24h.
-      </p>
+      <h2 [innerHTML]="t().titleHtml"></h2>
+      <p>{{ t().description }}</p>
       <div class="contact-links">
         @for (link of contactLinks; track $index; let i = $index) {
           <a
@@ -29,41 +26,41 @@
       </div>
     </div>
     <div class="contact-right">
-      <h3>Envoyer un message</h3>
+      <h3>{{ t().formTitle }}</h3>
       <form (ngSubmit)="submit()">
         <div class="form-group">
-          <label class="form-label" for="contact-name">Nom</label>
+          <label class="form-label" for="contact-name">{{ t().nameLabel }}</label>
           <input
             id="contact-name"
             class="form-input"
             type="text"
             name="name"
-            placeholder="Jean Dupont"
+            [placeholder]="t().namePlaceholder"
             [(ngModel)]="name"
           />
         </div>
         <div class="form-group">
-          <label class="form-label" for="contact-email">Email</label>
+          <label class="form-label" for="contact-email">{{ t().emailLabel }}</label>
           <input
             id="contact-email"
             class="form-input"
             type="email"
             name="email"
-            placeholder="jean@startup.fr"
+            [placeholder]="t().emailPlaceholder"
             [(ngModel)]="email"
           />
         </div>
         <div class="form-group">
-          <label class="form-label" for="contact-message">Message</label>
+          <label class="form-label" for="contact-message">{{ t().messageLabel }}</label>
           <textarea
             id="contact-message"
             class="form-input"
             name="message"
-            placeholder="Décrivez votre projet..."
+            [placeholder]="t().messagePlaceholder"
             [(ngModel)]="message"
           ></textarea>
         </div>
-        <button type="submit" class="form-submit">Envoyer →</button>
+        <button type="submit" class="form-submit">{{ t().submit }}</button>
       </form>
     </div>
   </div>

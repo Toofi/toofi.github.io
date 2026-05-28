@@ -1,14 +1,14 @@
 <div class="section-header" id="stack" appReveal>
-  <span class="section-header-label">Stack technique</span>
+  <span class="section-header-label">{{ sectionLabel() }}</span>
   <span class="section-header-count">003</span>
 </div>
 <div class="section-body">
   <div class="stack-layout" appReveal>
-    @for (card of cards; track card.title) {
+    @for (card of cards; track card.title.fr) {
       <div class="stack-card">
-        <div class="stack-cat">{{ card.category }}</div>
-        <div class="stack-title">{{ card.title }}</div>
-        <div class="stack-desc">{{ card.description }}</div>
+        <div class="stack-cat">{{ card.category[lang()] }}</div>
+        <div class="stack-title">{{ card.title[lang()] }}</div>
+        <div class="stack-desc">{{ card.description[lang()] }}</div>
         <div class="stack-tags">
           @for (tag of card.tags; track tag) {
             <span class="tag">{{ tag }}</span>
