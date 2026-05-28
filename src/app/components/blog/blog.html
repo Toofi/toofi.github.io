@@ -1,0 +1,19 @@
+<div class="section-header" id="blog" appReveal>
+  <span class="section-header-label">Blog</span>
+  <span class="section-header-count">004</span>
+</div>
+<div class="section-body">
+  <div class="blog-layout" appReveal>
+    @for (post of posts; track post.titleHtml) {
+      <a class="blog-card" [href]="post.link">
+        <div class="blog-label">{{ post.label }}</div>
+        <div class="blog-title" [innerHTML]="post.titleHtml"></div>
+        <div class="blog-excerpt">{{ post.excerpt }}</div>
+        <div class="blog-footer">
+          <span class="blog-read">Lire l'article →</span>
+          <span class="blog-date">{{ post.date }}</span>
+        </div>
+      </a>
+    }
+  </div>
+</div>

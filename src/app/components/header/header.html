@@ -1,0 +1,23 @@
+<header class="site-header">
+  <div class="topbar">
+    <a href="#top" class="topbar-logo" (click)="goToTop($event)">TOOFI<span>.</span>DEV</a>
+    <button class="lang-switch" type="button" (click)="toggleLang()">
+      <span>{{ lang() }}</span>
+    </button>
+  </div>
+  <nav class="navbar">
+    <ul class="nav-links">
+      @for (link of links; track link.href) {
+        <li>
+          <a
+            [href]="'#' + link.href"
+            [class.active]="activeSection() === link.href"
+            (click)="scrollTo($event, link.href)"
+            >{{ link.label }}</a
+          >
+        </li>
+      }
+    </ul>
+    <span class="nav-avail">Disponible en freelance</span>
+  </nav>
+</header>

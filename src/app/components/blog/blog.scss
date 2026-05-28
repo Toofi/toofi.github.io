@@ -1,0 +1,114 @@
+.blog-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  border: 1px solid var(--line);
+  border-right: none;
+  border-bottom: none;
+}
+
+.blog-card {
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.25s;
+  position: relative;
+}
+
+.blog-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  background: rgba(200, 80, 42, 0.03);
+}
+
+.blog-card:hover::before {
+  transform: scaleX(1);
+}
+
+.blog-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blog-label::before {
+  content: '';
+  width: 12px;
+  height: 1px;
+  background: var(--accent);
+  display: block;
+}
+
+.blog-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  flex: 1;
+  font-weight: 700;
+}
+
+.blog-title ::ng-deep em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.blog-excerpt {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+.blog-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.blog-read {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s;
+}
+
+.blog-card:hover .blog-read {
+  gap: 12px;
+}
+
+.blog-date {
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
