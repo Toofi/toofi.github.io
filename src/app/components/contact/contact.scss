@@ -62,6 +62,16 @@
   color: var(--muted);
 }
 
+.contact-link.is-protected {
+  cursor: pointer;
+}
+
+.contact-link.is-protected span:first-child {
+  user-select: none;
+  font-style: italic;
+  opacity: 0.85;
+}
+
 .contact-right {
   padding: 40px;
 }

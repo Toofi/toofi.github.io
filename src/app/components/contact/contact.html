@@ -11,15 +11,19 @@
         long terme. Basé à Mouscron, Belgique. Réponse sous 24h.
       </p>
       <div class="contact-links">
-        @for (link of contactLinks; track link.href) {
+        @for (link of contactLinks; track $index; let i = $index) {
           <a
             class="contact-link"
-            [href]="link.href"
-            [attr.target]="link.external ? '_blank' : null"
-            [attr.rel]="link.external ? 'noopener' : null"
+            [class.is-protected]="link.kind === 'protected' && !isRevealed(i)"
+            [attr.href]="hrefFor(link, i)"
+            [attr.target]="link.kind === 'public' && link.external ? '_blank' : null"
+            [attr.rel]="link.kind === 'public' && link.external ? 'noopener' : null"
+            [attr.aria-label]="ariaLabel(link, i)"
+            [attr.role]="link.kind === 'protected' && !isRevealed(i) ? 'button' : null"
+            (click)="onContactClick($event, link, i)"
           >
-            <span>{{ link.label }}</span>
-            <span>↗</span>
+            <span>{{ displayLabel(link, i) }}</span>
+            <span>{{ link.kind === 'protected' && !isRevealed(i) ? '👁' : '↗' }}</span>
           </a>
         }
       </div>
