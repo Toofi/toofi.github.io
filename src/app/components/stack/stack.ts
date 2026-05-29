@@ -54,7 +54,7 @@ const CARDS: StackCard[] = [
       fr: 'Modélisation relationnelle et NoSQL selon les besoins du domaine métier.',
       en: 'Relational and NoSQL modelling, picked to fit the business domain.',
     },
-    tags: ['SQL Server', 'MongoDB', 'Oracle'],
+    tags: ['SQL Server', 'MongoDB'],
   },
   {
     category: { fr: 'DevOps & qualité', en: 'DevOps & quality' },
@@ -63,7 +63,7 @@ const CARDS: StackCard[] = [
       fr: 'CI/CD fiable, tests automatisés, revue de code systématique et bonne hygiène de projet.',
       en: 'Reliable CI/CD, automated tests, systematic code review and clean project hygiene.',
     },
-    tags: ['GitHub Actions', 'Azure DevOps', 'Docker', 'xUnit', 'FluentAssertions'],
+    tags: ['Azure DevOps', 'GitHub Actions', 'Docker', 'xUnit', 'FluentAssertions'],
   },
   {
     category: { fr: 'Méthodes', en: 'Methods' },
