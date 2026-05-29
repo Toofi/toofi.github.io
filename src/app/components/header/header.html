@@ -4,10 +4,10 @@
     <button
       class="lang-switch"
       type="button"
-      [attr.aria-label]="'Switch to ' + switchLabel()"
+      [attr.aria-label]="'Switch to ' + languageSwitchLabel()"
       (click)="toggleLang()"
     >
-      <span>{{ switchLabel() }}</span>
+      <span>{{ languageSwitchLabel() }}</span>
     </button>
   </div>
   <nav class="navbar">
