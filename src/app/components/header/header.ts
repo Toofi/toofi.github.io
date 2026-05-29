@@ -40,8 +40,8 @@ export class HeaderComponent implements OnInit {
   ];
 
   /** Label shown in the button = the language we'd switch TO (i.e. the other one). */
-  protected readonly switchLabel = computed(() =>
-    this.langService.current() === 'fr' ? 'EN' : 'FR',
+  protected readonly languageSwitchLabel = computed(() =>
+    this.langService.current() === 'fr' ? '→ EN' : '→ FR',
   );
 
   protected readonly availLabel = computed(() => AVAIL[this.langService.current()]);
